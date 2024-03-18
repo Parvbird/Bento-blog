@@ -60,7 +60,7 @@ const Navbar = (props: Props) => {
             width="100"
             height="100"
             alt=""
-            className="rounded-full w-12"
+            className="rounded-full w-10"
           />
         </button>
       </div>
@@ -86,7 +86,7 @@ const Navbar = (props: Props) => {
         </nav>
       </div>
       <div className="flex gap-8 align-middle items-center">
-        <button className="bg-black text-white p-2 px-8 rounded-full">
+        <button className="bg-black text-white p-3 px-6 rounded-full">
           Get started
         </button>
       </div>
