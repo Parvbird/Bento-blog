@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+    .active {
+      @apply bg-black p-3 rounded-full text-white;
+    }
+  }
