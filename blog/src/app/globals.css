@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* active navbar */
+
 @layer components {
-    .active {
-      @apply bg-black p-3 rounded-full text-white;
-    }
+  .active {
+    @apply bg-black p-3 rounded-full text-white;
   }
+}

@@ -36,7 +36,6 @@ const Navbar = (props: Props) => {
   const pages = [
     { name: "Overview", path: "/" },
     { name: "Explore", path: "/explore" },
-    { name: "Profile", path: "/profile" },
     { name: "Resource", path: "/resource" },
   ];
 
