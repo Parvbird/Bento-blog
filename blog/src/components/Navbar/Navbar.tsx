@@ -36,7 +36,6 @@ const Navbar = (props: Props) => {
   const pages = [
     { name: "Overview", path: "/" },
     { name: "Explore", path: "/explore" },
-    { name: "Resource", path: "/resource" },
   ];
 
   const isActive = (path) => {
@@ -86,8 +85,8 @@ const Navbar = (props: Props) => {
         </nav>
       </div>
       <div className="flex gap-8 align-middle items-center">
-        <button className="bg-black text-white p-3 px-6 rounded-full">
-          Get started
+        <button className="bg-black text-white p-2 px-6 rounded-full">
+          Login
         </button>
       </div>
     </header>

@@ -1,4 +1,4 @@
-import ResourcePage from "@/components/Home/Resource/ResourcePage";
+import PostPage from "@/components/Home/Explore/Post/PostPage";
 import React from "react";
 
 type Props = {};
@@ -6,7 +6,7 @@ type Props = {};
 const page = (props: Props) => {
   return (
     <div className="w-full">
-      <ResourcePage />
+      <PostPage />
     </div>
   );
 };
