@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&family=Nunito:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600;700&family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&family=Nunito:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600;700&family=Varela+Round&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +14,7 @@ html {
 
 body {
   background-color: rgb(247, 247, 247);
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -27,5 +27,15 @@ body {
 @layer components {
   .active {
     @apply bg-black p-3 rounded-full text-white;
+  }
+}
+
+@layer base {
+  .ql-container {
+    font-size: 20px !important;
+  }
+
+  .quill > .ql-container > .ql-editor.ql-blank::before {
+    color: gray;
   }
 }
