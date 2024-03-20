@@ -85,9 +85,12 @@ const Navbar = (props: Props) => {
         </nav>
       </div>
       <div className="flex gap-8 align-middle items-center">
-        <button className="bg-black text-white p-2 px-6 rounded-full">
+        <Link
+          href="/login"
+          className="bg-black text-white p-2 px-6 rounded-full"
+        >
           Login
-        </button>
+        </Link>
       </div>
     </header>
   );

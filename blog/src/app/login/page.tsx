@@ -1,11 +1,14 @@
-import React from 'react'
+import LoginPage from "@/components/Login/LoginPage";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="w-full">
+      <LoginPage />
+    </div>
+  );
+};
 
-export default page
+export default page;
