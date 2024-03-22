@@ -11,6 +11,9 @@ import { useSearchParams, useRouter } from "next/navigation";
 type Props = {};
 
 const validationSchema = yup.object({
+  username: yup
+    .string("Enter your username")
+    .required("Username is required"),
   email: yup
     .string("Enter your email")
     .email("Enter a valid email")
@@ -21,7 +24,7 @@ const validationSchema = yup.object({
     .required("Password is required"),
 });
 
-const LoginPage = (props: Props) => {
+const RegisterPage = (props: Props) => {
   // const { data: session } = useSession();
 
   const {
@@ -36,7 +39,7 @@ const LoginPage = (props: Props) => {
     initialValues: {
       email: "",
       password: "",
-      error: null,
+      username: "",
     },
     validationSchema: validationSchema,
     onSubmit: async (values, actions) => {
@@ -52,14 +55,26 @@ const LoginPage = (props: Props) => {
 
   return (
     <div className="w-full flex flex-col mx-auto justify-center h-screen align-middle items-center">
-      <div className="bg-white rounded-3xl p-10 flex flex-col gap-10 lg:w-[600px] w-full align-middle items-center">
+      <div className="bg-white rounded-3xl lg:p-10 p-2 flex flex-col gap-10 lg:w-[600px] mt-[80px] w-full align-middle items-center">
         <h1 className="text-3xl uppercase font-bold text-center">
-          Welcome Back !
+          Welcome !
         </h1>
         <form
           action=""
           className="lg:w-[600px] flex flex-col gap-10 align-middle items-start p-10"
         >
+          <div className="flex flex-col gap-8 align-middle items-start w-full">
+            <p className="text-xl">Username: </p>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              value={values.username}
+              onChange={handleChange}
+              className="w-full rounded-full p-3 px-6 border border-black required:"
+            />
+          </div>
           <div className="flex flex-col gap-8 align-middle items-start w-full">
             <p className="text-xl">Email: </p>
             <input
@@ -96,4 +111,4 @@ const LoginPage = (props: Props) => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

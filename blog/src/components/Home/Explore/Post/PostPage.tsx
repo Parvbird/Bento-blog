@@ -4,7 +4,9 @@ import CommentPage from "./comment/CommentPage";
 
 type Props = {};
 
-const PostPage = (props: Props) => {
+const PostPage = () => {
+  // const {postId} = params;
+
   const picture = "/images/header.jpg";
 
   return (
@@ -12,6 +14,7 @@ const PostPage = (props: Props) => {
       <div className="mt-[150px] flex w-full align-middle items-start">
         <h1 className="text-4xl font-bold uppercase lg:text-7xl">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ipsum.
+          {/* {JSON.stringify(postId)} */}
         </h1>
       </div>
       <div className="rounded-3xl w-full">

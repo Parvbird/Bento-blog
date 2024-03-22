@@ -30,8 +30,7 @@ const Navbar = (props: Props) => {
   // pathname for current nav
   const currentPath = usePathname();
 
-  // router
-  const router = useRouter();
+  const status = "notauthenticated";
 
   const pages = [
     { name: "Overview", path: "/" },
@@ -46,7 +45,7 @@ const Navbar = (props: Props) => {
   const logo = "/images/logo.png";
   return (
     <header
-      className={`z-40 mb-20 flex justify-between gap-10 align-middle lg:p-0 lg:px-8 p-3 transition duration-700 ease-in-out w-full items-center bg-white bg-opacity-90 rounded-full ${
+      className={`z-40 mb-20 flex justify-between gap-10 align-middle lg:p-1 lg:px-8 p-3 transition duration-700 ease-in-out w-full items-center bg-white bg-opacity-90 rounded-full ${
         sticky
           ? "!fixed !z-[9999] bg-black bg-opacity-40 shadow-sticky backdrop-blur-md !transition align-middle items-center"
           : "absolute"
@@ -84,14 +83,37 @@ const Navbar = (props: Props) => {
           </ul>
         </nav>
       </div>
-      <div className="flex gap-8 align-middle items-center">
-        <Link
-          href="/login"
-          className="bg-black text-white p-2 px-6 rounded-full"
-        >
-          Login
-        </Link>
-      </div>
+      {status === "notauthenticated" ? (
+        <div className="flex gap-8 align-middle items-center">
+          <Link
+            href="/login"
+            className="bg-black text-white p-2 px-6 rounded-full"
+          >
+            Login
+          </Link>
+          <Link
+            href="/register"
+            className="bg-black text-white p-2 px-6 rounded-full"
+          >
+            Register
+          </Link>
+        </div>
+      ) : (
+        <div className="flex gap-10 align-middle items-center">
+          <Link
+            href="/write"
+            className="bg-black text-white p-2 px-6 rounded-full"
+          >
+            Write
+          </Link>
+          <Link
+            href="/login"
+            className="bg-black text-white p-2 px-6 rounded-full"
+          >
+            Logout
+          </Link>
+        </div>
+      )}
     </header>
   );
 };
